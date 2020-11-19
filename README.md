@@ -15,3 +15,27 @@ go get github.com/sivamgr/malgova
 Algo strategies written in go should fully implement the malgova.AlgoStrategy interface as defined below
 
 ```go
+// AlgoStrategy Interface
+type AlgoStrategy interface {
+	Setup(symbol string, b *Book) []string
+	OnTick(t kstreamdb.TickData, b *Book)
+	OnPeriodic(t time.Time, b *Book) // Invokes every sec
+	OnClose(b *Book)
+}
+```
+# Order Book
+
+the Order-Book is passed to algo-strategies callback. Orders can be placed or position shall be exit through the methods exposed by the book
+
+
+# Example
+
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+
+	"github.com/markcheno/go-talib"
+	"github.com/sivamgr/kstreamdb"

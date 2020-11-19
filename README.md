@@ -88,3 +88,14 @@ func (a *Momento) OnPeriodic(t time.Time, b *malgova.Book) {
 		if b.IsBookClean() && talib.Crossover(ma2, ma1) {
 			quantityToBuy := int(b.Cash / ltp)
 			b.Buy(quantityToBuy)
+		}
+		if b.InPosition() && talib.Crossunder(ma2, ma3) {
+			b.Exit()
+		}
+	}
+}
+
+// OnClose method
+func (a *Momento) OnClose(b *malgova.Book) {
+	b.Exit()
+}

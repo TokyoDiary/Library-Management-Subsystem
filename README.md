@@ -39,3 +39,31 @@ import (
 
 	"github.com/markcheno/go-talib"
 	"github.com/sivamgr/kstreamdb"
+	"github.com/sivamgr/malgova"
+)
+
+// Momento AlgoStrategy
+type Momento struct {
+	symbol      string
+	candles1min *malgova.CandlesData
+}
+
+// Setup method, should return list of symbols it need to subscribe for tickdata
+func (a *Momento) Setup(symbol string, b *malgova.Book) []string {
+	symbolsToSubscribe := make([]string, 0)
+	a.symbol = symbol
+
+	//set up data aggregation.
+	a.candles1min = malgova.NewCandlesData(60)
+
+	// add symbols needed to subscribe
+	symbolsToSubscribe = append(symbolsToSubscribe, symbol)
+	b.AllocateCash(10000)
+	return symbolsToSubscribe
+}
+// OnDayStart method
+func (a *Momento) OnDayStart(b *malgova.Book) {
+}
+
+// OnDayEnd method
+func (a *Momento) OnDayEnd(b *malgova.Book) {

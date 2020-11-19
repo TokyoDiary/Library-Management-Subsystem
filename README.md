@@ -67,3 +67,24 @@ func (a *Momento) OnDayStart(b *malgova.Book) {
 
 // OnDayEnd method
 func (a *Momento) OnDayEnd(b *malgova.Book) {
+}
+
+
+// OnTick Method
+func (a *Momento) OnTick(t kstreamdb.TickData, b *malgova.Book) {
+	if t.TradingSymbol == a.symbol {
+		// update data aggregation on tick
+		a.candles1min.Update(t)
+	}
+}
+
+// OnPeriodic method
+func (a *Momento) OnPeriodic(t time.Time, b *malgova.Book) {
+	if a.cs1m.HasChanged(t) && len(a.cs1m.Close) > 15 {
+		ltp := a.cs1m.LTP
+		ma1 := talib.Sma(a.cs1m.High, 15)
+		ma2 := talib.Ema(a.cs1m.Close, 15)
+		ma3 := talib.Sma(a.cs1m.Low, 15)
+		if b.IsBookClean() && talib.Crossover(ma2, ma1) {
+			quantityToBuy := int(b.Cash / ltp)
+			b.Buy(quantityToBuy)

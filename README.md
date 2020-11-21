@@ -99,3 +99,15 @@ func (a *Momento) OnPeriodic(t time.Time, b *malgova.Book) {
 func (a *Momento) OnClose(b *malgova.Book) {
 	b.Exit()
 }
+
+func main() {
+	db := kstreamdb.SetupDatabase("/home/pi/test-data/")
+	bt := malgova.BacktestEngine{}
+	bt.RegisterAlgo(Momento{})
+	bt.Run(&db, nil)
+	for _, s := range bt.Scores() {
+		fmt.Println(s)
+	}
+}
+
+```

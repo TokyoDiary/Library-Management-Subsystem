@@ -41,3 +41,25 @@ func (a *Momento) OnPeriodic(t time.Time, b *malgova.Book) {
 			b.Buy(quantityToBuy)
 		}
 		if b.InPosition() && talib.Crossunder(ma2, ma3) {
+			//fmt.Printf("[%v] Sell @ %.2f\n", t, ltp)
+			b.Exit()
+		}
+	}
+}
+
+// Setup method, should return list of symbols it need to subscribe for tickdata
+func (a *Momento) Setup(symbol string, b *malgova.Book) []string {
+	symbolsToSubscribe := make([]string, 0)
+	a.symbol = symbol
+	a.cs1m = malgova.NewCandlesData(60)
+	symbolsToSubscribe = append(symbolsToSubscribe, symbol)
+	b.AllocateCash(10000)
+	return symbolsToSubscribe
+}
+
+func main() {
+	db := kstreamdb.SetupDatabase("/home/pi/test-data/")
+	bt := malgova.BacktestEngine{}
+	bt.RegisterAlgo(Momento{})
+	bt.Run(&db, nil)
+	for _, s := range bt.Scores() {

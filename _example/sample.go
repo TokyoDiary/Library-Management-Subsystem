@@ -63,3 +63,6 @@ func main() {
 	bt.RegisterAlgo(Momento{})
 	bt.Run(&db, nil)
 	for _, s := range bt.Scores() {
+		fmt.Printf("%s\n", s)
+	}
+}

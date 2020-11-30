@@ -1,3 +1,4 @@
 package malgova
 
-// Allo
+// AllocateCash book
+func (b *Book) A

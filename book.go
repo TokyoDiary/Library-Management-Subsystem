@@ -1,4 +1,4 @@
 package malgova
 
 // AllocateCash book
-func (b *Book) A
+func (b *Book) AllocateCash(Money float64

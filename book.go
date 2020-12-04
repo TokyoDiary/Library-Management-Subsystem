@@ -6,3 +6,4 @@ func (b *Book) AllocateCash(Money float64) {
 	b.Cash = b.CashAllocated
 }
 
+// PlaceMarketOrder boo

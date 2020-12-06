@@ -7,4 +7,5 @@ func (b *Book) AllocateCash(Money float64) {
 }
 
 // PlaceMarketOrder book
-func (b *Book) plac
+func (b *Book) placeMarketOrder(Qty int) {
+	b

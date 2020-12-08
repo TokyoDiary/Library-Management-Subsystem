@@ -8,4 +8,5 @@ func (b *Book) AllocateCash(Money float64) {
 
 // PlaceMarketOrder book
 func (b *Book) placeMarketOrder(Qty int) {
-	b.PendingOrderQuantity 
+	b.PendingOrderQuantity = Qty
+	b.IsMarketOrder 

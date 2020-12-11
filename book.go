@@ -14,4 +14,5 @@ func (b *Book) placeMarketOrder(Qty int) {
 
 // PlaceMarketOrder book
 func (b *Book) placeLimitOrder(Qty int, Price float64) {
-	b.PendingOrderQu
+	b.PendingOrderQuantity = Qty
+	b.IsMar

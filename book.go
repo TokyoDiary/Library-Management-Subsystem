@@ -19,3 +19,5 @@ func (b *Book) placeLimitOrder(Qty int, Price float64) {
 	b.PendingOrderPrice = Price
 }
 
+// QuantityAffordable book
+f

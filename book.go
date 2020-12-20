@@ -20,4 +20,4 @@ func (b *Book) placeLimitOrder(Qty int, Price float64) {
 }
 
 // QuantityAffordable book
-func (b *Book) Qua
+func (b *Book) QuantityAffordable(P

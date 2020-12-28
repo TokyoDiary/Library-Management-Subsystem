@@ -25,3 +25,6 @@ func (b *Book) QuantityAffordable(Price float64) int {
 		return int(b.Cash / Price)
 	}
 	return 0
+}
+
+// Buy Ord

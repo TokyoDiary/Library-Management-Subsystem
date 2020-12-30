@@ -27,4 +27,5 @@ func (b *Book) QuantityAffordable(Price float64) int {
 	return 0
 }
 
-// Buy Ord
+// Buy Order
+func (b *Book) Bu

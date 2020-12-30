@@ -29,4 +29,4 @@ func (b *Book) QuantityAffordable(Price float64) int {
 
 // Buy Order
 func (b *Book) Buy(Qty int) {
-	
+	b.placeMarketOrder(Qt

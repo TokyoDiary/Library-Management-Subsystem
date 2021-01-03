@@ -34,4 +34,7 @@ func (b *Book) Buy(Qty int) {
 
 // Sell Order
 func (b *Book) Sell(Qty int) {
-	b.placeMarketOrder(
+	b.placeMarketOrder(-Qty)
+}
+
+// InPosition check

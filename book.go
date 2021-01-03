@@ -33,4 +33,5 @@ func (b *Book) Buy(Qty int) {
 }
 
 // Sell Order
-func (b *Book) Sell(Qty i
+func (b *Book) Sell(Qty int) {
+	b.placeMarketOrder(

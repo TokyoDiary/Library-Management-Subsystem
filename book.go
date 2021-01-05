@@ -39,4 +39,7 @@ func (b *Book) Sell(Qty int) {
 
 // InPosition check
 func (b *Book) InPosition() bool {
-	return (b
+	return (b.Position != 0)
+}
+
+// IsOr

@@ -42,4 +42,5 @@ func (b *Book) InPosition() bool {
 	return (b.Position != 0)
 }
 
-// IsOr
+// IsOrderWaiting check
+func 

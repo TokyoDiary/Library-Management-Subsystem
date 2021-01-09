@@ -47,4 +47,5 @@ func (b *Book) IsOrderWaiting() bool {
 	return (b.PendingOrderQuantity != 0)
 }
 
-// IsBook
+// IsBookClean check
+func (b *B

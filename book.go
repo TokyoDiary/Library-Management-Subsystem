@@ -48,4 +48,5 @@ func (b *Book) IsOrderWaiting() bool {
 }
 
 // IsBookClean check
-func (b *Book) IsBookClean()
+func (b *Book) IsBookClean() bool {
+	return (!

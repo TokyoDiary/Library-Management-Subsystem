@@ -44,4 +44,7 @@ func (b *Book) InPosition() bool {
 
 // IsOrderWaiting check
 func (b *Book) IsOrderWaiting() bool {
-	return (b.PendingOrderQu
+	return (b.PendingOrderQuantity != 0)
+}
+
+// IsBook

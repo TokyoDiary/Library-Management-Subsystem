@@ -49,4 +49,4 @@ func (b *Book) IsOrderWaiting() bool {
 
 // IsBookClean check
 func (b *Book) IsBookClean() bool {
-	return (!
+	return (!b.InPosition() && !b.Is

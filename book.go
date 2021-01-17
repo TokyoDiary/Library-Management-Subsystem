@@ -53,4 +53,5 @@ func (b *Book) IsBookClean() bool {
 }
 
 // Exit all position
-fun
+func (b *Book) Exit() {
+	if b.Po

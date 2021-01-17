@@ -52,4 +52,5 @@ func (b *Book) IsBookClean() bool {
 	return (!b.InPosition() && !b.IsOrderWaiting())
 }
 
-// E
+// Exit all position
+fun

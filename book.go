@@ -55,4 +55,6 @@ func (b *Book) IsBookClean() bool {
 // Exit all position
 func (b *Book) Exit() {
 	if b.Position != 0 {
-		b.placeMarketOrder(-b.Position
+		b.placeMarketOrder(-b.Position)
+	}
+}

@@ -11,4 +11,4 @@ type btAlgoRunner struct {
 	algoName            string
 	symbol              string
 	ptr                 reflect.Value
-	aint
+	ainterface          i

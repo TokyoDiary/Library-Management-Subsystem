@@ -8,4 +8,4 @@ import (
 )
 
 type btAlgoRunner struct {
-	algoName
+	algoName            string

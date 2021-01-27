@@ -11,4 +11,5 @@ type btAlgoRunner struct {
 	algoName            string
 	symbol              string
 	ptr                 reflect.Value
-	ainterface          i
+	ainterface          interface{}
+	strategy       

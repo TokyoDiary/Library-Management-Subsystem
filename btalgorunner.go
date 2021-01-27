@@ -10,4 +10,5 @@ import (
 type btAlgoRunner struct {
 	algoName            string
 	symbol              string
-	ptr                 
+	ptr                 reflect.Value
+	aint

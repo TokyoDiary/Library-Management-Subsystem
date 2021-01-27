@@ -9,3 +9,4 @@ import (
 
 type btAlgoRunner struct {
 	algoName            string
+	symbol              strin

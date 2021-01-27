@@ -7,4 +7,5 @@ import (
 	"github.com/sivamgr/kstreamdb"
 )
 
-type btAlgoRu
+type btAlgoRunner struct {
+	algoName

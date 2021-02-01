@@ -12,4 +12,4 @@ type btAlgoRunner struct {
 	symbol              string
 	ptr                 reflect.Value
 	ainterface          interface{}
-	strategy       
+	strategy            AlgoStrat

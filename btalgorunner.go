@@ -12,4 +12,5 @@ type btAlgoRunner struct {
 	symbol              string
 	ptr                 reflect.Value
 	ainterface          interface{}
-	strategy            AlgoStrat
+	strategy            AlgoStrategy
+	book               

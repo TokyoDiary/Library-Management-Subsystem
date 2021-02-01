@@ -13,4 +13,5 @@ type btAlgoRunner struct {
 	ptr                 reflect.Value
 	ainterface          interface{}
 	strategy            AlgoStrategy
-	book               
+	book                Book
+	watch      

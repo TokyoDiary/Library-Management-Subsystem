@@ -14,4 +14,4 @@ type btAlgoRunner struct {
 	ainterface          interface{}
 	strategy            AlgoStrategy
 	book                Book
-	watch      
+	watch               []string

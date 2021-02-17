@@ -15,4 +15,5 @@ type btAlgoRunner struct {
 	strategy            AlgoStrategy
 	book                Book
 	watch               []string
-	enable             
+	enable              bool
+	lastTick       

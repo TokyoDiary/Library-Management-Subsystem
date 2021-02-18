@@ -16,4 +16,5 @@ type btAlgoRunner struct {
 	book                Book
 	watch               []string
 	enable              bool
-	lastTick            kstreamdb.TickDa
+	lastTick            kstreamdb.TickData
+	queueTick           [

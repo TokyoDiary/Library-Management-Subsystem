@@ -22,4 +22,4 @@ type btAlgoRunner struct {
 	orders              []orderEntry
 }
 
-func (
+func (a *btAlgoRunner) ID() string {

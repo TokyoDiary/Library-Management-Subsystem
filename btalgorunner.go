@@ -18,4 +18,5 @@ type btAlgoRunner struct {
 	enable              bool
 	lastTick            kstreamdb.TickData
 	queueTick           []kstreamdb.TickData
-	utcLastPeriodicCall 
+	utcLastPeriodicCall int64
+	orders        

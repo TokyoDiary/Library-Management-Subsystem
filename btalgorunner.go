@@ -19,4 +19,7 @@ type btAlgoRunner struct {
 	lastTick            kstreamdb.TickData
 	queueTick           []kstreamdb.TickData
 	utcLastPeriodicCall int64
-	orders        
+	orders              []orderEntry
+}
+
+func (

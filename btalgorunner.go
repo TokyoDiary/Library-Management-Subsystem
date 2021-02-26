@@ -23,3 +23,4 @@ type btAlgoRunner struct {
 }
 
 func (a *btAlgoRunner) ID() string {
+	return a.algoName + "

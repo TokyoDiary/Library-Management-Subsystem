@@ -25,3 +25,5 @@ type btAlgoRunner struct {
 func (a *btAlgoRunner) ID() string {
 	return a.algoName + "::" + a.symbol
 }
+
+func (a *btAlgoRunne

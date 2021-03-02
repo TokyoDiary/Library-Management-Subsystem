@@ -26,4 +26,6 @@ func (a *btAlgoRunner) ID() string {
 	return a.algoName + "::" + a.symbol
 }
 
-func (a *btAlgoRunner) queue(t kstreamdb.TickD
+func (a *btAlgoRunner) queue(t kstreamdb.TickData) {
+	if a.enable {
+		a.que

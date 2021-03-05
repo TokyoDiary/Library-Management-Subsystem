@@ -28,4 +28,4 @@ func (a *btAlgoRunner) ID() string {
 
 func (a *btAlgoRunner) queue(t kstreamdb.TickData) {
 	if a.enable {
-		a.que
+		a.queueTick = append(a.q

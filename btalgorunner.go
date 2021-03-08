@@ -31,3 +31,5 @@ func (a *btAlgoRunner) queue(t kstreamdb.TickData) {
 		a.queueTick = append(a.queueTick, t)
 	}
 }
+
+func (a *btAl

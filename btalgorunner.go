@@ -32,4 +32,4 @@ func (a *btAlgoRunner) queue(t kstreamdb.TickData) {
 	}
 }
 
-func (a *btAl
+func (a *btAlgoRunner) resetQue

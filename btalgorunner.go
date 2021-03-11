@@ -33,4 +33,4 @@ func (a *btAlgoRunner) queue(t kstreamdb.TickData) {
 }
 
 func (a *btAlgoRunner) resetQueue() {
-	a.queueTick = m
+	a.queueTick = make([]kstream

@@ -32,4 +32,5 @@ func (a *btAlgoRunner) queue(t kstreamdb.TickData) {
 	}
 }
 
-func (a *btAlgoRunner) resetQue
+func (a *btAlgoRunner) resetQueue() {
+	a.queueTick = m

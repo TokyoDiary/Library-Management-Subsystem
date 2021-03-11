@@ -36,4 +36,5 @@ func (a *btAlgoRunner) resetQueue() {
 	a.queueTick = make([]kstreamdb.TickData, 0, len(a.watch)*24000)
 }
 
-func (a *bt
+func (a *btAlgoRunner) run() {
+	if a

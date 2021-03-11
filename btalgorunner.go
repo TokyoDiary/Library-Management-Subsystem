@@ -37,4 +37,5 @@ func (a *btAlgoRunner) resetQueue() {
 }
 
 func (a *btAlgoRunner) run() {
-	if a
+	if a.enable {
+		a.strategy.

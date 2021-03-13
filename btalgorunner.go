@@ -39,4 +39,5 @@ func (a *btAlgoRunner) resetQueue() {
 func (a *btAlgoRunner) run() {
 	if a.enable {
 		a.strategy.OnDayStart(&a.book)
-		for _, t := range a.queueTi
+		for _, t := range a.queueTick {
+			a.checkClock(t.

@@ -45,4 +45,4 @@ func (a *btAlgoRunner) run() {
 		}
 		a.strategy.OnDayEnd(&a.book)
 		a.resetQueue()
-		//fmt.Printf("P/
+		//fmt.Printf("P/L %9.2f | Trades %3d | 

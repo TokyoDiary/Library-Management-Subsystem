@@ -44,4 +44,5 @@ func (a *btAlgoRunner) run() {
 			a.handleTick(t)
 		}
 		a.strategy.OnDayEnd(&a.book)
-		a.resetQu
+		a.resetQueue()
+		//fmt.Printf("P/

@@ -40,4 +40,5 @@ func (a *btAlgoRunner) run() {
 	if a.enable {
 		a.strategy.OnDayStart(&a.book)
 		for _, t := range a.queueTick {
-			a.checkClock(t.
+			a.checkClock(t.Timestamp)
+			a.ha

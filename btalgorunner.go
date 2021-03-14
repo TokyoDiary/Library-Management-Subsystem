@@ -43,4 +43,5 @@ func (a *btAlgoRunner) run() {
 			a.checkClock(t.Timestamp)
 			a.handleTick(t)
 		}
-		a.strategy.On
+		a.strategy.OnDayEnd(&a.book)
+		a.resetQu

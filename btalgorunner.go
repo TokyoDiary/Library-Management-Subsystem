@@ -42,4 +42,5 @@ func (a *btAlgoRunner) run() {
 		for _, t := range a.queueTick {
 			a.checkClock(t.Timestamp)
 			a.handleTick(t)
-	
+		}
+		a.strategy.On

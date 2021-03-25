@@ -45,4 +45,7 @@ func (a *btAlgoRunner) run() {
 		}
 		a.strategy.OnDayEnd(&a.book)
 		a.resetQueue()
-		//fmt.Printf("P/L %9.2f | Trades %3d | %s\n", a.book.Cash-a.book.CashAllocated, a.b
+		//fmt.Printf("P/L %9.2f | Trades %3d | %s\n", a.book.Cash-a.book.CashAllocated, a.book.OrderCount, a.ID())
+	}
+}
+

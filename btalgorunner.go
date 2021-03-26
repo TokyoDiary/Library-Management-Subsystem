@@ -49,3 +49,4 @@ func (a *btAlgoRunner) run() {
 	}
 }
 
+func (a *btAlgoRunner) 

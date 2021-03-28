@@ -49,4 +49,5 @@ func (a *btAlgoRunner) run() {
 	}
 }
 
-func (a *btAlgoRunner) 
+func (a *btAlgoRunner) exit() {
+	if a.ena

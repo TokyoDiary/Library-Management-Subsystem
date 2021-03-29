@@ -50,4 +50,5 @@ func (a *btAlgoRunner) run() {
 }
 
 func (a *btAlgoRunner) exit() {
-	if a.ena
+	if a.enable {
+		a.strategy.OnClose

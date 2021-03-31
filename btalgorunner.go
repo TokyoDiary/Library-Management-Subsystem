@@ -51,4 +51,5 @@ func (a *btAlgoRunner) run() {
 
 func (a *btAlgoRunner) exit() {
 	if a.enable {
-		a.strategy.OnClose
+		a.strategy.OnClose(&a.book)
+		a.handleBook()

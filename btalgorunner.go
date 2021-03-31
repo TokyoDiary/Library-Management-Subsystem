@@ -53,3 +53,7 @@ func (a *btAlgoRunner) exit() {
 	if a.enable {
 		a.strategy.OnClose(&a.book)
 		a.handleBook()
+	}
+}
+
+func (a *bt

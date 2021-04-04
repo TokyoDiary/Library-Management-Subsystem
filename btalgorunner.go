@@ -56,4 +56,5 @@ func (a *btAlgoRunner) exit() {
 	}
 }
 
-func (a *btAlgoRunner) checkCl
+func (a *btAlgoRunner) checkClock(t time.Time) {
+	utc

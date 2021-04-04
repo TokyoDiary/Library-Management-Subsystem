@@ -58,4 +58,4 @@ func (a *btAlgoRunner) exit() {
 
 func (a *btAlgoRunner) checkClock(t time.Time) {
 	utcNow := t.Unix()
-	if a.
+	if a.utcLastPeriodicCall 

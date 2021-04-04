@@ -57,4 +57,5 @@ func (a *btAlgoRunner) exit() {
 }
 
 func (a *btAlgoRunner) checkClock(t time.Time) {
-	utc
+	utcNow := t.Unix()
+	if a.

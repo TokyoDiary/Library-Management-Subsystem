@@ -56,4 +56,4 @@ func (a *btAlgoRunner) exit() {
 	}
 }
 
-func (a *bt
+func (a *btAlgoRunner) checkCl

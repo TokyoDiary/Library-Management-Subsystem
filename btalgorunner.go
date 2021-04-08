@@ -60,4 +60,8 @@ func (a *btAlgoRunner) checkClock(t time.Time) {
 	utcNow := t.Unix()
 	if a.utcLastPeriodicCall < utcNow {
 		a.utcLastPeriodicCall = utcNow
-		a.strategy.OnPeriodic(time.Unix(utcNow, 0), &a.bo
+		a.strategy.OnPeriodic(time.Unix(utcNow, 0), &a.book)
+	}
+}
+
+func (a *btAlgoRun

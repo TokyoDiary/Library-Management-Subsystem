@@ -64,4 +64,5 @@ func (a *btAlgoRunner) checkClock(t time.Time) {
 	}
 }
 
-func (a *btAlgoRun
+func (a *btAlgoRunner) handleBook() {
+	if 

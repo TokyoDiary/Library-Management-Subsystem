@@ -65,4 +65,4 @@ func (a *btAlgoRunner) checkClock(t time.Time) {
 }
 
 func (a *btAlgoRunner) handleBook() {
-	if 
+	if a.book.IsOrderWaiting()

@@ -68,4 +68,4 @@ func (a *btAlgoRunner) handleBook() {
 	if a.book.IsOrderWaiting() {
 		if a.book.IsMarketOrder {
 			if a.book.PendingOrderQuantity > 0 {
-				buyPrice :=
+				buyPrice := a.lastTick.Ask[0].Pri

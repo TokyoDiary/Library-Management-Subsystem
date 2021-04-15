@@ -67,4 +67,5 @@ func (a *btAlgoRunner) checkClock(t time.Time) {
 func (a *btAlgoRunner) handleBook() {
 	if a.book.IsOrderWaiting() {
 		if a.book.IsMarketOrder {
-			if a.book.PendingOrderQuanti
+			if a.book.PendingOrderQuantity > 0 {
+				buyPrice :=

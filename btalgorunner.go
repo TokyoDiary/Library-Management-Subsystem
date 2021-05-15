@@ -78,4 +78,5 @@ func (a *btAlgoRunner) handleBook() {
 				// add trade trade ledger
 				a.orders = append(a.orders, orderEntry{
 					algoName: a.algoName,
-					at:       a.lastTi
+					at:       a.lastTick.Timestamp,
+					symbol:   

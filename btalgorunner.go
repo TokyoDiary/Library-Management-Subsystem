@@ -76,4 +76,4 @@ func (a *btAlgoRunner) handleBook() {
 				a.book.Cash -= float64(cost)
 				a.book.Position += a.book.PendingOrderQuantity
 				// add trade trade ledger
-				a.orde
+				a.orders = append(a.orders, or

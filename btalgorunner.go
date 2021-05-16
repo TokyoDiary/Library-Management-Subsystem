@@ -79,4 +79,5 @@ func (a *btAlgoRunner) handleBook() {
 				a.orders = append(a.orders, orderEntry{
 					algoName: a.algoName,
 					at:       a.lastTick.Timestamp,
-					symbol:   
+					symbol:   a.symbol,
+					qty:      

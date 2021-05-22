@@ -80,4 +80,5 @@ func (a *btAlgoRunner) handleBook() {
 					algoName: a.algoName,
 					at:       a.lastTick.Timestamp,
 					symbol:   a.symbol,
-					qty:      a.book.PendingOrderQuanti
+					qty:      a.book.PendingOrderQuantity,
+					price:    float6

@@ -87,4 +87,4 @@ func (a *btAlgoRunner) handleBook() {
 				a.book.PendingOrderQuantity = 0
 				a.book.OrderCount++
 			} else if a.book.PendingOrderQuantity < 0 {
-				sellPrice :
+				sellPrice := a.lastTick.Bid[0].

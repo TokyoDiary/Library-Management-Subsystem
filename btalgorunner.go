@@ -92,4 +92,4 @@ func (a *btAlgoRunner) handleBook() {
 					sellPrice = a.lastTick.LastPrice
 				}
 
-				cost := sellPrice * 
+				cost := sellPrice * float32(a.book.Pend

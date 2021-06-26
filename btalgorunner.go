@@ -104,4 +104,4 @@ func (a *btAlgoRunner) handleBook() {
 					price:    float64(sellPrice),
 				})
 
-			
+				a.book.Pending

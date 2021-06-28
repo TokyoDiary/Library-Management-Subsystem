@@ -105,4 +105,6 @@ func (a *btAlgoRunner) handleBook() {
 				})
 
 				a.book.PendingOrderQuantity = 0
-				a.
+				a.book.OrderCount++
+			}
+		} else

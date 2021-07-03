@@ -109,4 +109,4 @@ func (a *btAlgoRunner) handleBook() {
 			}
 		} else {
 			if a.book.PendingOrderQuantity > 0 {
-				if a.lastTic
+				if a.lastTick.LastPrice <= float32(a.

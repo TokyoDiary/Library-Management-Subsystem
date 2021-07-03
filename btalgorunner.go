@@ -108,4 +108,5 @@ func (a *btAlgoRunner) handleBook() {
 				a.book.OrderCount++
 			}
 		} else {
-			if a.book.PendingOrderQuan
+			if a.book.PendingOrderQuantity > 0 {
+				if a.lastTic

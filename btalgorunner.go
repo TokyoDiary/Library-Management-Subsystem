@@ -112,4 +112,5 @@ func (a *btAlgoRunner) handleBook() {
 				if a.lastTick.LastPrice <= float32(a.book.PendingOrderPrice) {
 					cost := a.book.PendingOrderPrice * float64(a.book.PendingOrderQuantity)
 					a.book.Cash -= float64(cost)
-					a.book.Position += a.book.Pe
+					a.book.Position += a.book.PendingOrderQuantity
+				

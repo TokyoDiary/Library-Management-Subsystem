@@ -120,3 +120,5 @@ func (a *btAlgoRunner) handleBook() {
 						symbol:   a.symbol,
 						qty:      a.book.PendingOrderQuantity,
 						price:    float64(a.book.PendingOrderPrice),
+					})
+					a.bo

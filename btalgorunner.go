@@ -131,4 +131,4 @@ func (a *btAlgoRunner) handleBook() {
 					a.book.Position += a.book.PendingOrderQuantity
 					// add trade trade ledger
 					a.orders = append(a.orders, orderEntry{
-						algo
+						algoName: a.algoNa

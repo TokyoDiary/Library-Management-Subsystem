@@ -145,4 +145,4 @@ func (a *btAlgoRunner) handleBook() {
 	}
 }
 
-f
+func (a *btAlgoRunner) handl

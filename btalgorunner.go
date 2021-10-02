@@ -145,4 +145,4 @@ func (a *btAlgoRunner) handleBook() {
 	}
 }
 
-func (a *btAlgoRunner) handl
+func (a *btAlgoRunner) handleTick(t kstreamdb.Tic

@@ -146,4 +146,4 @@ func (a *btAlgoRunner) handleBook() {
 }
 
 func (a *btAlgoRunner) handleTick(t kstreamdb.TickData) {
-	if (a.symbol == t.TradingSymb
+	if (a.symbol == t.TradingSymbol) && t.IsTradable {

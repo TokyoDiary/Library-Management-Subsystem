@@ -150,4 +150,4 @@ func (a *btAlgoRunner) handleTick(t kstreamdb.TickData) {
 		a.lastTick = t
 		a.handleBook()
 	}
-	a.strategy
+	a.strategy.OnTick(t, &a.book)

@@ -153,4 +153,4 @@ func (a *btAlgoRunner) handleTick(t kstreamdb.TickData) {
 	a.strategy.OnTick(t, &a.book)
 }
 
-func (a *btAlgoRunne
+func (a *btAlgoRunner) popOrders() []o

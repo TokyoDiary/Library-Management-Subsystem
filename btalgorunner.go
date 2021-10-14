@@ -151,3 +151,6 @@ func (a *btAlgoRunner) handleTick(t kstreamdb.TickData) {
 		a.handleBook()
 	}
 	a.strategy.OnTick(t, &a.book)
+}
+
+func (a *btAlgoRunne

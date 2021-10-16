@@ -154,4 +154,5 @@ func (a *btAlgoRunner) handleTick(t kstreamdb.TickData) {
 }
 
 func (a *btAlgoRunner) popOrders() []orderEntry {
-	order
+	orders := a.orders
+	a.orders 

@@ -159,4 +159,4 @@ func (a *btAlgoRunner) popOrders() []orderEntry {
 	return orders
 }
 
-fu
+func newAlgoInstan

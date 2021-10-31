@@ -159,4 +159,4 @@ func (a *btAlgoRunner) popOrders() []orderEntry {
 	return orders
 }
 
-func newAlgoInstance(algoType reflec
+func newAlgoInstance(algoType reflect.Type, symbol s

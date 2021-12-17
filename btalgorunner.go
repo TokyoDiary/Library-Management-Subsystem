@@ -164,4 +164,5 @@ func newAlgoInstance(algoType reflect.Type, symbol string) *btAlgoRunner {
 	a.algoName = algoType.Name()
 	a.symbol = symbol
 	a.book = Book{}
-	a.ptr = reflect.
+	a.ptr = reflect.New(algoType)
+	a.str

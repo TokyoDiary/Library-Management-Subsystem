@@ -165,4 +165,5 @@ func newAlgoInstance(algoType reflect.Type, symbol string) *btAlgoRunner {
 	a.symbol = symbol
 	a.book = Book{}
 	a.ptr = reflect.New(algoType)
-	a.strategy = a.ptr.Interface().(AlgoStrate
+	a.strategy = a.ptr.Interface().(AlgoStrategy)
+	a.watch = a.st

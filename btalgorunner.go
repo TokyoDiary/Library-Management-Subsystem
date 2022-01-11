@@ -168,4 +168,6 @@ func newAlgoInstance(algoType reflect.Type, symbol string) *btAlgoRunner {
 	a.strategy = a.ptr.Interface().(AlgoStrategy)
 	a.watch = a.strategy.Setup(symbol, &a.book)
 	a.enable = len(a.watch) > 0
-	a.utcLas
+	a.utcLastPeriodicCall = 0
+
+	if 

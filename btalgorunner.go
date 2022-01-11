@@ -170,4 +170,5 @@ func newAlgoInstance(algoType reflect.Type, symbol string) *btAlgoRunner {
 	a.enable = len(a.watch) > 0
 	a.utcLastPeriodicCall = 0
 
-	if 
+	if a.enable {
+		// p

@@ -171,4 +171,5 @@ func newAlgoInstance(algoType reflect.Type, symbol string) *btAlgoRunner {
 	a.utcLastPeriodicCall = 0
 
 	if a.enable {
-		// p
+		// prealloc queue
+		a.resetQu

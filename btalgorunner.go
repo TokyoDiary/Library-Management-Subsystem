@@ -172,4 +172,6 @@ func newAlgoInstance(algoType reflect.Type, symbol string) *btAlgoRunner {
 
 	if a.enable {
 		// prealloc queue
-		a.resetQu
+		a.resetQueue()
+	}
+	a.orders =

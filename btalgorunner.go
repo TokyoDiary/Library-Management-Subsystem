@@ -174,4 +174,5 @@ func newAlgoInstance(algoType reflect.Type, symbol string) *btAlgoRunner {
 		// prealloc queue
 		a.resetQueue()
 	}
-	a.orders =
+	a.orders = make([]orderEntry, 0)
+	//fmt

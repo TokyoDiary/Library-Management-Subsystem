@@ -175,4 +175,4 @@ func newAlgoInstance(algoType reflect.Type, symbol string) *btAlgoRunner {
 		a.resetQueue()
 	}
 	a.orders = make([]orderEntry, 0)
-	//fmt
+	//fmt.Printf("%+v %+v %+v \n

@@ -176,3 +176,5 @@ func newAlgoInstance(algoType reflect.Type, symbol string) *btAlgoRunner {
 	}
 	a.orders = make([]orderEntry, 0)
 	//fmt.Printf("%+v %+v %+v \n", a.ptr, reflect.TypeOf(a.ptr), a.ptr.Interface().(AlgoStrategy))
+	return a
+}

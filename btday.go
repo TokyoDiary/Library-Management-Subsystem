@@ -45,3 +45,31 @@ func (bt *btDayRunner) setup(algos []reflect.Type) {
 	bt.algos = algos
 	bt.tickManager = make(map[string]*btTickManager)
 	bt.algoRunner = make(map[string]*btAlgoRunner)
+	bt.flagSymbolAlgoSetup = make(map[string]bool)
+	// reset orders
+	bt.orders = make([]orderEntry, 0)
+}
+
+func (bt *btDayRunner) exit() {
+	for _, algo := range bt.algoRunner {
+		algo.exit()
+		// merge the trade ledger
+		bt.orders = append(bt.orders, algo.popOrders()...)
+	}
+}
+
+func (bt *btDayRunner) popOrders() []orderEntry {
+	orders := bt.orders
+	bt.orders = make([]orderEntry, 0)
+	return orders
+}
+
+//run day data against algos
+func (bt *btDayRunner) run(dt time.Time, ticks []kstreamdb.TickData) {
+
+	for _, t := range ticks {
+		// instantiate algo runners if not instantiated already
+		if t.IsTradable {
+			if _, ok := bt.flagSymbolAlgoSetup[t.TradingSymbol]; !ok {
+				bt.flagSymbolAlgoSetup[t.TradingSymbol] = true
+				bt.instantiateAllAlgosForSymbol(t.TradingSymbol)

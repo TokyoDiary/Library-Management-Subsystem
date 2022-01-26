@@ -73,3 +73,31 @@ func (bt *btDayRunner) run(dt time.Time, ticks []kstreamdb.TickData) {
 			if _, ok := bt.flagSymbolAlgoSetup[t.TradingSymbol]; !ok {
 				bt.flagSymbolAlgoSetup[t.TradingSymbol] = true
 				bt.instantiateAllAlgosForSymbol(t.TradingSymbol)
+			}
+		}
+
+		// pass data to algos subscribed to this symbol
+		if tickMgr, ok := bt.tickManager[t.TradingSymbol]; ok {
+			for _, algoid := range tickMgr.observerAlgoIDs {
+				pAlgo := bt.algoRunner[algoid]
+				// queue tick for handling
+				pAlgo.queue(t)
+			}
+		}
+	}
+
+	inQueueCount := 0
+	for _, algo := range bt.algoRunner {
+		inQueueCount += len(algo.queueTick)
+	}
+	log.Printf("[%s] %d ticks in Queue", dt.Format("2006/01/02"), inQueueCount)
+
+	var wg sync.WaitGroup
+	// run the runners
+	for _, algo := range bt.algoRunner {
+		wg.Add(1)
+		go algoRunWorker(&wg, algo, bt)
+	}
+
+	wg.Wait()
+}

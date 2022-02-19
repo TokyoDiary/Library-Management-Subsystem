@@ -65,3 +65,23 @@ func (bt *BacktestEngine) RunAlgoBetweenDate(feed *kstreamdb.DB, oms OrderManage
 	dayRunner.exit()
 	//pull the orders from the run
 	bt.orders = dayRunner.popOrders()
+	// analyze the orders and generate scores for algo
+	bt.scores = calculateAlgoScores(bt.orders)
+}
+
+// Run BacktestEngine
+func (bt *BacktestEngine) Run(feed *kstreamdb.DB, oms OrderManager) {
+	// Load All Data into memory
+	dates, _ := feed.GetDates()
+	dayRunner := btDayRunner{}
+	dayRunner.setup(bt.algos)
+	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
+	var wg sync.WaitGroup
+
+	for _, dt := range dates {
+		log.Printf("[%s] Loading data", dt.Format("2006/01/02"))
+		data, _ := feed.LoadDataForDate(dt)
+		log.Printf("[%s] %d ticks loaded", dt.Format("2006/01/02"), len(data))
+		wg.Wait()
+		wg.Add(1)
+		go func(d time.Time) {

@@ -85,3 +85,20 @@ func (bt *BacktestEngine) Run(feed *kstreamdb.DB, oms OrderManager) {
 		wg.Wait()
 		wg.Add(1)
 		go func(d time.Time) {
+			dayRunner.run(d, data)
+			wg.Done()
+			log.Printf("[%s] Completed", d.Format("2006/01/02"))
+		}(dt)
+	}
+	wg.Wait()
+	dayRunner.exit()
+	//pull the orders from the run
+	bt.orders = dayRunner.popOrders()
+	// analyze the orders and generate scores for algo
+	bt.scores = calculateAlgoScores(bt.orders)
+}
+
+// Scores returns the scores calculated
+func (bt *BacktestEngine) Scores() []AlgoScore {
+	return bt.scores
+}

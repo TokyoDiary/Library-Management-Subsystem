@@ -83,3 +83,33 @@ func (f *CandlesData) Update(t kstreamdb.TickData) {
 		f.currentCandleHarvestTime = f.currentCandle.T.Add(time.Second * time.Duration(f.candlePeriod))
 		f.currentCandle.O = f.LTP
 		f.currentCandle.H = f.LTP
+		f.currentCandle.L = f.LTP
+		f.currentCandle.V = 0
+		if f.totalVolumeTraded > volume {
+			f.totalVolumeTraded = 0
+		}
+	} else {
+		if f.LTP > f.currentCandle.H {
+			f.currentCandle.H = f.LTP
+		}
+		if f.LTP < f.currentCandle.L {
+			f.currentCandle.L = f.LTP
+		}
+	}
+
+	f.currentCandle.C = f.LTP
+	f.currentCandle.V += (volume - f.totalVolumeTraded)
+	f.totalVolumeTraded = volume
+	f.currentCandleTicksReceived++
+}
+
+// NewCandlesData Instantiates a CandlesData Buffer
+func NewCandlesData(periodInSeconds int) *CandlesData {
+	f := new(CandlesData)
+	f.candlePeriod = periodInSeconds
+	// For Now supports only NSE Market time.
+	// TODO : generalize to support many markets
+	// 9:15 IST = 3:45 UTC = 13500 sec
+	f.marketStartTimeHour = 9
+	f.marketStartTimeMinute = 15
+	// pre-alloc mem for 6 hr 15 mins

@@ -113,3 +113,13 @@ func NewCandlesData(periodInSeconds int) *CandlesData {
 	f.marketStartTimeHour = 9
 	f.marketStartTimeMinute = 15
 	// pre-alloc mem for 6 hr 15 mins
+	preAllocSize := (22500 / periodInSeconds) + 1
+	f.Candles = make([]CandleStick, 0, preAllocSize)
+	f.Open = make([]float64, 0, preAllocSize)
+	f.High = make([]float64, 0, preAllocSize)
+	f.Low = make([]float64, 0, preAllocSize)
+	f.Close = make([]float64, 0, preAllocSize)
+	f.Volume = make([]float64, 0, preAllocSize)
+	f.currentCandleTicksReceived = 0
+	return f
+}

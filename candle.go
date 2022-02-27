@@ -62,3 +62,24 @@ func (f *CandlesData) Update(t kstreamdb.TickData) {
 
 	if t.IsTradable {
 		ltt = t.LastTradeTime
+		volume = t.VolumeTraded
+	} else {
+		ltt = t.Timestamp
+		volume = 0
+	}
+
+	f.LTP = float64(t.LastPrice)
+
+	if f.currentCandleTicksReceived == 0 {
+		if len(f.Candles) == 0 {
+			f.dayStartTime = time.Date(ltt.Year(), ltt.Month(), ltt.Day(), f.marketStartTimeHour, f.marketStartTimeMinute, 0, 0, ltt.Location())
+		}
+		if ltt.Before(f.dayStartTime) {
+			return
+		}
+
+		nw := int(ltt.Sub(f.dayStartTime).Seconds()) / f.candlePeriod
+		f.currentCandle.T = f.dayStartTime.Add(time.Second * time.Duration(nw*f.candlePeriod))
+		f.currentCandleHarvestTime = f.currentCandle.T.Add(time.Second * time.Duration(f.candlePeriod))
+		f.currentCandle.O = f.LTP
+		f.currentCandle.H = f.LTP

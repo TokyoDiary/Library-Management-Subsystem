@@ -46,3 +46,19 @@ func (f *CandlesData) HasChanged(t time.Time) bool {
 		f.Candles = append(f.Candles, f.currentCandle)
 		f.Open = append(f.Open, f.currentCandle.O)
 		f.High = append(f.High, f.currentCandle.H)
+		f.Low = append(f.Low, f.currentCandle.L)
+		f.Close = append(f.Close, f.currentCandle.C)
+		f.Volume = append(f.Volume, float64(f.currentCandle.V))
+		f.currentCandleTicksReceived = 0 // reset candles
+		return true
+	}
+	return false
+}
+
+// Update method
+func (f *CandlesData) Update(t kstreamdb.TickData) {
+	var volume uint32
+	var ltt time.Time
+
+	if t.IsTradable {
+		ltt = t.LastTradeTime

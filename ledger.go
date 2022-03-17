@@ -2,4 +2,7 @@ package malgova
 
 import (
 	"fmt"
-	"ti
+	"time"
+)
+
+type orderEn

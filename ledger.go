@@ -5,4 +5,5 @@ import (
 	"time"
 )
 
-type orderEn
+type orderEntry struct {
+	alg

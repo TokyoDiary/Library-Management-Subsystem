@@ -6,4 +6,6 @@ import (
 )
 
 type orderEntry struct {
-	alg
+	algoName string
+	symbol   string
+	a

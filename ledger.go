@@ -8,4 +8,5 @@ import (
 type orderEntry struct {
 	algoName string
 	symbol   string
-	a
+	at       time.Time
+	q

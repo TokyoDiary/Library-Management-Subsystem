@@ -10,4 +10,7 @@ type orderEntry struct {
 	symbol   string
 	at       time.Time
 	qty      int
-	price    floa
+	price    float64
+}
+
+func (t orde

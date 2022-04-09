@@ -9,4 +9,5 @@ type orderEntry struct {
 	algoName string
 	symbol   string
 	at       time.Time
-	q
+	qty      int
+	price    floa

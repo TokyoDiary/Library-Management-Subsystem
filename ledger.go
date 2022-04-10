@@ -13,4 +13,5 @@ type orderEntry struct {
 	price    float64
 }
 
-func (t orderEntry) String(
+func (t orderEntry) String() string {
+	return fm

@@ -14,4 +14,4 @@ type orderEntry struct {
 }
 
 func (t orderEntry) String() string {
-	return fm
+	return fmt.Sprintf("%12s | %15s | 

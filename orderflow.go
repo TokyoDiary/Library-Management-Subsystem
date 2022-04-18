@@ -44,3 +44,28 @@ func (r *OrderFlowMonitor) GetPriceCell(p float32) *PriceCell {
 // Update processes the tick
 func (r *OrderFlowMonitor) Update(t kstreamdb.TickData) {
 	if t.VolumeTraded > r.LastTick.VolumeTraded {
+		r.TicksUpdated++
+		ltq := t.LastTradedQuantity
+		pCell := r.GetPriceCell(t.LastPrice)
+		if (len(r.Bids) > 0) && (t.LastPrice <= r.Bids[0].Price) {
+			pCell.BidQuantityTaken += ltq
+			r.TotalBidsQuantityTaken += ltq
+		} else if (len(r.Asks) > 0) && (t.LastPrice >= r.Bids[0].Price) {
+			pCell.AskQuantityTaken += ltq
+			r.TotalAsksQuantityTaken += ltq
+		}
+
+		pCell.VolumeTraded += ltq
+
+		// Update with latest depth
+		r.Bids = t.Bid
+		r.Asks = t.Ask
+	}
+
+	r.LastTick = t
+}
+
+func (v *PriceCell) resetCounters() {
+	v.AskQuantityTaken = 0
+	v.BidQuantityTaken = 0
+}

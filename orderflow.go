@@ -69,3 +69,29 @@ func (v *PriceCell) resetCounters() {
 	v.AskQuantityTaken = 0
 	v.BidQuantityTaken = 0
 }
+
+// Reset resets Bids/Asks
+func (r *OrderFlowMonitor) Reset() {
+	r.TotalAsksQuantityTaken = 0
+	r.TotalBidsQuantityTaken = 0
+	r.TicksUpdated = 0
+	for _, v := range r.Prices {
+		v.resetCounters()
+	}
+	r.LastTick = kstreamdb.TickData{}
+}
+
+// StringifyPriceCell Stringify the Price Bucket
+func (r *OrderFlowMonitor) StringifyPriceCell(p float32) string {
+
+	pCell := r.GetPriceCell(p)
+	if pCell == nil {
+		return ""
+	}
+	bidsQty := "        "
+	bidsCount := "        "
+	asksQty := "        "
+	asksCount := "        "
+	if (len(r.Bids) > 0) && (p <= r.Bids[0].Price) && (p >= r.Bids[len(r.Bids)-1].Price) {
+		for _, bid := range r.Bids {
+			if bid.Price == p {

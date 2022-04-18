@@ -95,3 +95,16 @@ func (r *OrderFlowMonitor) StringifyPriceCell(p float32) string {
 	if (len(r.Bids) > 0) && (p <= r.Bids[0].Price) && (p >= r.Bids[len(r.Bids)-1].Price) {
 		for _, bid := range r.Bids {
 			if bid.Price == p {
+				bidsCount = fmt.Sprintf("%8d", bid.Orders)
+				bidsQty = fmt.Sprintf("%8d", bid.Quantity)
+				break
+			}
+		}
+	} else if (len(r.Asks) > 0) && (p >= r.Asks[0].Price) && (p <= r.Asks[len(r.Asks)-1].Price) {
+		for _, ask := range r.Asks {
+			if ask.Price == p {
+				asksCount = fmt.Sprintf("%8d", ask.Orders)
+				asksQty = fmt.Sprintf("%8d", ask.Quantity)
+				break
+			}
+		}

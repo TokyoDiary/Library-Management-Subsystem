@@ -108,3 +108,15 @@ func (r *OrderFlowMonitor) StringifyPriceCell(p float32) string {
 				break
 			}
 		}
+	}
+
+	out := fmt.Sprintf("%8d|%8.2f|%s|%s|%8d|%8d|%s|%s", pCell.VolumeTraded, p, bidsCount, bidsQty, pCell.BidQuantityTaken, pCell.AskQuantityTaken, asksQty, asksCount)
+	return out
+
+}
+
+// StringifyTotals stringyfies total
+func (r *OrderFlowMonitor) StringifyTotals() string {
+	out := fmt.Sprintf("%8d                   %8d %8d %8d %8d ", r.LastTick.VolumeTraded, r.LastTick.TotalBuyQuantity, r.TotalBidsQuantityTaken, r.TotalAsksQuantityTaken, r.LastTick.TotalSellQuantity)
+	return out
+}

@@ -6,4 +6,5 @@ import (
 	"github.com/sivamgr/kstreamdb"
 )
 
-//Pl
+//PlaybackFeed struct
+type Playback

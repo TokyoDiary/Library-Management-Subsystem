@@ -7,4 +7,5 @@ import (
 )
 
 //PlaybackFeed struct
-type Playback
+type PlaybackFeed struct {
+	dateT

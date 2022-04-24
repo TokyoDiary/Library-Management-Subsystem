@@ -9,4 +9,7 @@ import (
 //PlaybackFeed struct
 type PlaybackFeed struct {
 	dateToPlay time.Time
-	db        
+	db         kstreamdb.DB
+}
+
+// Run

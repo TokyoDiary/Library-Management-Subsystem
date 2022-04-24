@@ -9,4 +9,4 @@ import (
 //PlaybackFeed struct
 type PlaybackFeed struct {
 	dateToPlay time.Time
-	
+	db        

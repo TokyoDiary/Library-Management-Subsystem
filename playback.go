@@ -13,4 +13,4 @@ type PlaybackFeed struct {
 }
 
 // Run PlaybackFeed
-func (f *Playb
+func (f *PlaybackFeed) Run(fCallba

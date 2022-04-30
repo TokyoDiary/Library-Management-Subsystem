@@ -14,4 +14,4 @@ type PlaybackFeed struct {
 
 // Run PlaybackFeed
 func (f *PlaybackFeed) Run(fCallback func(t kstreamdb.TickData)) {
-	f.db.Pla
+	f.db.PlaybackDate(f.dateToPl

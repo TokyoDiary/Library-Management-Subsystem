@@ -17,3 +17,5 @@ func (f *PlaybackFeed) Run(fCallback func(t kstreamdb.TickData)) {
 	f.db.PlaybackDate(f.dateToPlay, fCallback)
 }
 
+// Setup PlaybackFeed
+func

@@ -18,4 +18,4 @@ func (f *PlaybackFeed) Run(fCallback func(t kstreamdb.TickData)) {
 }
 
 // Setup PlaybackFeed
-func
+func (f *PlaybackFeed) Setup(k

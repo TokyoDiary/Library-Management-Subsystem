@@ -19,4 +19,4 @@ func (f *PlaybackFeed) Run(fCallback func(t kstreamdb.TickData)) {
 
 // Setup PlaybackFeed
 func (f *PlaybackFeed) Setup(kdbPath string) {
-	f.db = ks
+	f.db = kstreamdb.SetupData

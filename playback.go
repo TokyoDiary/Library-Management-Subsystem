@@ -23,4 +23,4 @@ func (f *PlaybackFeed) Setup(kdbPath string) {
 	f.dateToPlay = time.Now()
 }
 
-// SetD
+// SetDate for Playback

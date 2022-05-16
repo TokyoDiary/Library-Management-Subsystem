@@ -19,4 +19,5 @@ func (f *PlaybackFeed) Run(fCallback func(t kstreamdb.TickData)) {
 
 // Setup PlaybackFeed
 func (f *PlaybackFeed) Setup(kdbPath string) {
-	f.db = kstreamdb.SetupDatabase("/home/pi/data-kbridge
+	f.db = kstreamdb.SetupDatabase("/home/pi/data-kbridge/data/")
+	f.dateToPlay = time.

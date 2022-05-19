@@ -24,4 +24,4 @@ func (f *PlaybackFeed) Setup(kdbPath string) {
 }
 
 // SetDate for PlaybackFeed
-func (f *Playbac
+func (f *PlaybackFeed) SetDate(dt ti

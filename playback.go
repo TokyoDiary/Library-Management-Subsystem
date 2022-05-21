@@ -25,4 +25,5 @@ func (f *PlaybackFeed) Setup(kdbPath string) {
 
 // SetDate for PlaybackFeed
 func (f *PlaybackFeed) SetDate(dt time.Time) {
-	f.dateToPl
+	f.dateToPlay = dt
+}

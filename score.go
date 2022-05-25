@@ -8,4 +8,5 @@ import (
 	"gonum.org/v1/gonum/stat"
 )
 
-type tradeDat
+type tradeData struct {
+	algoName st

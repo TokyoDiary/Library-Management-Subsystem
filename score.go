@@ -9,4 +9,5 @@ import (
 )
 
 type tradeData struct {
-	algoName st
+	algoName string
+	symbol   string

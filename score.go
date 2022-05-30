@@ -12,3 +12,4 @@ type tradeData struct {
 	algoName string
 	symbol   string
 	orders   []orderEntry
+	score    AlgoScore

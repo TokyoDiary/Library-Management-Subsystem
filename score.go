@@ -14,3 +14,6 @@ type tradeData struct {
 	orders   []orderEntry
 	score    AlgoScore
 	trades   []tradeEntry
+}
+
+// AlgoScore struct

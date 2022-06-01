@@ -17,3 +17,5 @@ type tradeData struct {
 }
 
 // AlgoScore struct
+type AlgoScore struct {
+	Al

@@ -20,4 +20,5 @@ type tradeData struct {
 type AlgoScore struct {
 	AlgoName string
 	Symbol   string
-	// s
+	// stats and scores
+	OrdersCount

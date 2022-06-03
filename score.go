@@ -19,4 +19,5 @@ type tradeData struct {
 // AlgoScore struct
 type AlgoScore struct {
 	AlgoName string
-	Symbo
+	Symbol   string
+	// s

@@ -21,4 +21,5 @@ type AlgoScore struct {
 	AlgoName string
 	Symbol   string
 	// stats and scores
-	OrdersCount
+	OrdersCount          int
+	Trades

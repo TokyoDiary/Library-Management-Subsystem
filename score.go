@@ -23,4 +23,5 @@ type AlgoScore struct {
 	// stats and scores
 	OrdersCount          int
 	TradesCount          int
-	TradesWon 
+	TradesWon            int
+	TradesL

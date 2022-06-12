@@ -25,4 +25,5 @@ type AlgoScore struct {
 	TradesCount          int
 	TradesWon            int
 	TradesLost           int
-	Win
+	WinStreak            int
+	LossSt

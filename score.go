@@ -29,4 +29,6 @@ type AlgoScore struct {
 	LossStreak           int
 	NetPnl               float64
 	NetPnlPercentAverage float64
-	NetPnlPercentStdD
+	NetPnlPercentStdDev  float64
+
+	SQN 

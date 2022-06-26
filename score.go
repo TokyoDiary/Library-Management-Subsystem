@@ -31,4 +31,7 @@ type AlgoScore struct {
 	NetPnlPercentAverage float64
 	NetPnlPercentStdDev  float64
 
-	SQN 
+	SQN float64
+}
+
+func (t 

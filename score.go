@@ -34,4 +34,4 @@ type AlgoScore struct {
 	SQN float64
 }
 
-func (t 
+func (t AlgoScore) String(

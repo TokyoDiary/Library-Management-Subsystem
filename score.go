@@ -35,4 +35,4 @@ type AlgoScore struct {
 }
 
 func (t AlgoScore) String() string {
-	return
+	return fmt.Sprintf("%12s|%20s|%5

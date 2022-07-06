@@ -35,4 +35,7 @@ type AlgoScore struct {
 }
 
 func (t AlgoScore) String() string {
-	return fmt.Sprintf("%12s|%20s|%5d|%4d|%4d:%4d|%3d:%3d| %9.2f |%9.2f|%9.2f| %7.3f", t.AlgoName, t.Symbol, t.OrdersCount, t.TradesCount, t.TradesWon, t.TradesLost, t.WinStreak, t.LossStreak, t.NetPnl, t.NetPnlPercentAverage, t.NetPn
+	return fmt.Sprintf("%12s|%20s|%5d|%4d|%4d:%4d|%3d:%3d| %9.2f |%9.2f|%9.2f| %7.3f", t.AlgoName, t.Symbol, t.OrdersCount, t.TradesCount, t.TradesWon, t.TradesLost, t.WinStreak, t.LossStreak, t.NetPnl, t.NetPnlPercentAverage, t.NetPnlPercentStdDev, t.SQN)
+}
+
+ty

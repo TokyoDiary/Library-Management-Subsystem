@@ -40,3 +40,4 @@ func (t AlgoScore) String() string {
 
 type tradeEntry struct {
 	orders        int
+	buyValue      float64

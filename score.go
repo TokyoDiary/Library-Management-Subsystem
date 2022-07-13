@@ -41,4 +41,5 @@ func (t AlgoScore) String() string {
 type tradeEntry struct {
 	orders        int
 	buyValue      float64
-	sellValue     fl
+	sellValue     float64
+	pnl           floa

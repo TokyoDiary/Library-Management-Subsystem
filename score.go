@@ -42,4 +42,5 @@ type tradeEntry struct {
 	orders        int
 	buyValue      float64
 	sellValue     float64
-	pnl           floa
+	pnl           float64
+	pnlPercentage float64

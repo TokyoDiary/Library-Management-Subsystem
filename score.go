@@ -44,3 +44,6 @@ type tradeEntry struct {
 	sellValue     float64
 	pnl           float64
 	pnlPercentage float64
+}
+
+type algoTradeData str

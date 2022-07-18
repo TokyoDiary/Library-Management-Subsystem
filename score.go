@@ -46,4 +46,5 @@ type tradeEntry struct {
 	pnlPercentage float64
 }
 
-type algoTradeData str
+type algoTradeData struct {
+	bySymbolTrad

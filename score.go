@@ -47,4 +47,7 @@ type tradeEntry struct {
 }
 
 type algoTradeData struct {
-	bySymbolTrades map[string]*trade
+	bySymbolTrades map[string]*tradeData
+}
+
+func (a *tradeD

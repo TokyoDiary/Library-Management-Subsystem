@@ -50,4 +50,4 @@ type algoTradeData struct {
 	bySymbolTrades map[string]*tradeData
 }
 
-func (a *tradeD
+func (a *tradeData) add(t order

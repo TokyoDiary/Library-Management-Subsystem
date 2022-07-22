@@ -50,4 +50,5 @@ type algoTradeData struct {
 	bySymbolTrades map[string]*tradeData
 }
 
-func (a *tradeData) add(t order
+func (a *tradeData) add(t orderEntry) {
+	a.orders = 

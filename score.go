@@ -52,3 +52,7 @@ type algoTradeData struct {
 
 func (a *tradeData) add(t orderEntry) {
 	a.orders = append(a.orders, t)
+}
+
+// reset score
+func

@@ -55,4 +55,4 @@ func (a *tradeData) add(t orderEntry) {
 }
 
 // reset score
-func
+func (a *tradeDat

@@ -56,3 +56,4 @@ func (a *tradeData) add(t orderEntry) {
 
 // reset score
 func (a *tradeData) resetScore() {
+	a.trades = make

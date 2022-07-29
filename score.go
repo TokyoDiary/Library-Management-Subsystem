@@ -59,4 +59,5 @@ func (a *tradeData) resetScore() {
 	a.trades = make([]tradeEntry, 0)
 	a.score = AlgoScore{
 		AlgoName: a.algoName,
-		S
+		Symbol:   a.symbol,
+	}

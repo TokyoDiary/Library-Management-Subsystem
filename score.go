@@ -63,4 +63,4 @@ func (a *tradeData) resetScore() {
 	}
 }
 
-func (a *tradeData) con
+func (a *tradeData) consolidateTrades() {

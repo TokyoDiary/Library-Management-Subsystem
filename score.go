@@ -61,3 +61,6 @@ func (a *tradeData) resetScore() {
 		AlgoName: a.algoName,
 		Symbol:   a.symbol,
 	}
+}
+
+func (a *tradeData) con

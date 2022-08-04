@@ -64,3 +64,5 @@ func (a *tradeData) resetScore() {
 }
 
 func (a *tradeData) consolidateTrades() {
+	//sort orders by time
+	s

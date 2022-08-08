@@ -66,4 +66,7 @@ func (a *tradeData) resetScore() {
 func (a *tradeData) consolidateTrades() {
 	//sort orders by time
 	sort.Slice(a.orders, func(i, j int) bool {
-		return a.orders[i].at.Before(a.orders[j]
+		return a.orders[i].at.Before(a.orders[j].at)
+	})
+
+	// co

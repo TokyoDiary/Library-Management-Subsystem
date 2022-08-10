@@ -69,4 +69,6 @@ func (a *tradeData) consolidateTrades() {
 		return a.orders[i].at.Before(a.orders[j].at)
 	})
 
-	// consolidate orders int
+	// consolidate orders into trades
+	pos := 0
+	openT

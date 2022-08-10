@@ -71,4 +71,4 @@ func (a *tradeData) consolidateTrades() {
 
 	// consolidate orders into trades
 	pos := 0
-	openT
+	openTrade := tradeEntry{}

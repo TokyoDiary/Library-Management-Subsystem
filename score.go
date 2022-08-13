@@ -73,4 +73,5 @@ func (a *tradeData) consolidateTrades() {
 	pos := 0
 	openTrade := tradeEntry{}
 	for _, o := range a.orders {
-		if pos == 
+		if pos == 0 {
+			openTrade.o

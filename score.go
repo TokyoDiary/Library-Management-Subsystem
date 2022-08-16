@@ -75,4 +75,5 @@ func (a *tradeData) consolidateTrades() {
 	for _, o := range a.orders {
 		if pos == 0 {
 			openTrade.orders = 0
-			openTrade.buyValue
+			openTrade.buyValue = 0
+			openTrade.se

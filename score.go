@@ -78,4 +78,5 @@ func (a *tradeData) consolidateTrades() {
 			openTrade.buyValue = 0
 			openTrade.sellValue = 0
 		}
-		po
+		pos += o.qty
+		if o.qty > 0 

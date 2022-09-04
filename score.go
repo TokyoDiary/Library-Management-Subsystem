@@ -90,4 +90,5 @@ func (a *tradeData) consolidateTrades() {
 			openTrade.pnl = openTrade.sellValue - openTrade.buyValue
 			if openTrade.buyValue > 0 {
 				openTrade.pnlPercentage = (openTrade.pnl)
-			} else if
+			} else if openTrade.pnl == 0 {
+				

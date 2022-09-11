@@ -97,4 +97,9 @@ func (a *tradeData) consolidateTrades() {
 			} else {
 				openTrade.pnlPercentage = 100
 			}
-			a.trades = append(a.trades, ope
+			a.trades = append(a.trades, openTrade)
+		}
+	}
+}
+
+func

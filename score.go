@@ -102,4 +102,4 @@ func (a *tradeData) consolidateTrades() {
 	}
 }
 
-func
+func (a *tradeData) process

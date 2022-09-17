@@ -103,4 +103,6 @@ func (a *tradeData) consolidateTrades() {
 }
 
 func (a *tradeData) processScore() {
-	a.resetScore(
+	a.resetScore()
+	a.consolidateTrades()
+

@@ -107,4 +107,4 @@ func (a *tradeData) processScore() {
 	a.consolidateTrades()
 
 	a.score.TradesCount = len(a.trades)
-	pnl := 
+	pnl := make([]float6

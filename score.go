@@ -108,4 +108,7 @@ func (a *tradeData) processScore() {
 
 	a.score.TradesCount = len(a.trades)
 	pnl := make([]float64, 0)
-	winStreak :=
+	winStreak := 0
+	lossStreak := 0
+
+	if

@@ -112,4 +112,5 @@ func (a *tradeData) processScore() {
 	lossStreak := 0
 
 	if a.score.TradesCount > 0 {
-		for _, t := range 
+		for _, t := range a.trades {
+	

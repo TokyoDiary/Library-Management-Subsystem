@@ -117,4 +117,5 @@ func (a *tradeData) processScore() {
 			if t.pnl > 0 {
 				winStreak++
 				lossStreak = 0
-				a.
+				a.score.TradesWon++
+			} 

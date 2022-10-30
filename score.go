@@ -119,4 +119,5 @@ func (a *tradeData) processScore() {
 				lossStreak = 0
 				a.score.TradesWon++
 			} else {
-				winStreak = 
+				winStreak = 0
+				lossStreak++

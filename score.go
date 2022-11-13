@@ -123,4 +123,5 @@ func (a *tradeData) processScore() {
 				lossStreak++
 				a.score.TradesLost++
 			}
-			a.score.Ne
+			a.score.NetPnl += t.pnl
+			pnl =

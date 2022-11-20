@@ -124,4 +124,4 @@ func (a *tradeData) processScore() {
 				a.score.TradesLost++
 			}
 			a.score.NetPnl += t.pnl
-			pnl =
+			pnl = append(pnl, t.pnlPercentage

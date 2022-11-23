@@ -125,4 +125,5 @@ func (a *tradeData) processScore() {
 			}
 			a.score.NetPnl += t.pnl
 			pnl = append(pnl, t.pnlPercentage)
-			if a.score.WinSt
+			if a.score.WinStreak < winStreak {
+				a

@@ -128,4 +128,4 @@ func (a *tradeData) processScore() {
 			if a.score.WinStreak < winStreak {
 				a.score.WinStreak = winStreak
 			}
-			i
+			if a.score.LossStreak < lossS

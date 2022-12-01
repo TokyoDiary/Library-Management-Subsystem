@@ -132,3 +132,4 @@ func (a *tradeData) processScore() {
 				a.score.LossStreak = lossStreak
 			}
 		}
+		a.score.NetPn

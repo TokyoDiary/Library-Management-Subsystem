@@ -133,4 +133,5 @@ func (a *tradeData) processScore() {
 			}
 		}
 		a.score.NetPnlPercentAverage = stat.Mean(pnl, nil)
-		a.score.NetPnlPercentStdDev = stat.StdDev(pnl, n
+		a.score.NetPnlPercentStdDev = stat.StdDev(pnl, nil)
+		if a.score.Net

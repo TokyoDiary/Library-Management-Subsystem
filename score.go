@@ -141,4 +141,5 @@ func (a *tradeData) processScore() {
 	}
 }
 
-func calculateAlgoScores(orders []orderEntry) []AlgoSco
+func calculateAlgoScores(orders []orderEntry) []AlgoScore {
+	scores := ma

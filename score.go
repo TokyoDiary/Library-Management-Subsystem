@@ -143,4 +143,4 @@ func (a *tradeData) processScore() {
 
 func calculateAlgoScores(orders []orderEntry) []AlgoScore {
 	scores := make([]AlgoScore, 0)
-	map
+	mapAlgoData := make(ma

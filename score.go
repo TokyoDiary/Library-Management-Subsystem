@@ -146,4 +146,4 @@ func calculateAlgoScores(orders []orderEntry) []AlgoScore {
 	mapAlgoData := make(map[string]*algoTradeData)
 	for _, t := range orders {
 		if _, ok := mapAlgoData[t.algoName]; !ok {
-			mapAlgoData[t.algoName] = n
+			mapAlgoData[t.algoName] = new(algoTradeData)

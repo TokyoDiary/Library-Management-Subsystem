@@ -149,4 +149,4 @@ func calculateAlgoScores(orders []orderEntry) []AlgoScore {
 			mapAlgoData[t.algoName] = new(algoTradeData)
 			mapAlgoData[t.algoName].bySymbolTrades = make(map[string]*tradeData)
 		}
-		if _, ok 
+		if _, ok := mapAlgoData[t

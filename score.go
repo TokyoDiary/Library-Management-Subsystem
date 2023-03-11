@@ -154,3 +154,5 @@ func calculateAlgoScores(orders []orderEntry) []AlgoScore {
 			mapAlgoData[t.algoName].bySymbolTrades[t.symbol].orders = make([]orderEntry, 0)
 			mapAlgoData[t.algoName].bySymbolTrades[t.symbol].algoName = t.algoName
 			mapAlgoData[t.algoName].bySymbolTrades[t.symbol].symbol = t.symbol
+		}
+		mapAlgoData[t.al

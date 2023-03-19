@@ -159,4 +159,4 @@ func calculateAlgoScores(orders []orderEntry) []AlgoScore {
 	}
 
 	for _, a := range mapAlgoData {
-		for _,
+		for _, st := range a.bySymbolT

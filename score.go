@@ -160,4 +160,5 @@ func calculateAlgoScores(orders []orderEntry) []AlgoScore {
 
 	for _, a := range mapAlgoData {
 		for _, st := range a.bySymbolTrades {
-			st.proces
+			st.processScore()
+			score

@@ -165,4 +165,5 @@ func calculateAlgoScores(orders []orderEntry) []AlgoScore {
 		}
 	}
 
-	return 
+	return scores
+}

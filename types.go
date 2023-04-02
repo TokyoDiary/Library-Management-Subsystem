@@ -30,3 +30,23 @@ type Engine interface {
 	Run(feed *kstreamdb.DB, oms OrderManager)
 	SubscribeChannel(Symbol string, a AlgoStrategy)
 }
+
+// AlgoStrategy Interface
+type AlgoStrategy interface {
+	Setup(symbol string, b *Book) []string
+	OnDayStart(b *Book)
+	OnDayEnd(b *Book)
+	OnTick(t kstreamdb.TickData, b *Book)
+	OnPeriodic(t time.Time, b *Book) // Invokes every sec
+	OnClose(b *Book)
+}
+
+/*
+func getType(myvar interface{}) string {
+	t := reflect.TypeOf(myvar)
+	if t.Kind() == reflect.Ptr {
+		return "*" + t.Elem().Name()
+	}
+	return t.Name()
+}
+*/
